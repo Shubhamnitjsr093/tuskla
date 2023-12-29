@@ -1,4 +1,4 @@
-const backendUrl = "http://localhost:5000";
+const backendUrl = "https://tuskla.vercel.app";
 let email = "";
 
 async function postRegisterData(event) {
