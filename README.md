@@ -1,4 +1,4 @@
-## Round-1 Code is above on folder having name "Round1"
+# Round-1 Code is above on folder having name "Round1"
   * Create a Linux command via bash script as per the instructions in Ubuntu
   * Command name - internsctl
   * Command version - v0.1.0
@@ -11,9 +11,7 @@
 <img src="Round1/cpu.png" alt="CPU Info">
 <img src="Round1/user.png" alt="User">
 
-# ROUND 2
-
-## TUSKLA Car Selling Application
+# Round-2 TUSKLA Car Selling Application
 
 Welcome to TUSKLA, a Car Selling Application developed using HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB.
 
