@@ -1,6 +1,48 @@
 const backendUrl = "https://tuskla.vercel.app";
 let email = "";
 
+const grandparentElement = document.getElementById("navbar");
+try {
+  const jwtToken = localStorage.getItem("jwtToken");
+  console.log(jwtToken);
+
+  if (jwtToken) {
+    let parentElement=document.createElement("li");
+    
+    let childElement=document.createElement("a");
+    childElement.innerHTML="Logout";
+    childElement.setAttribute("onclick", "handleLogout()");
+    parentElement.appendChild(childElement);
+    grandparentElement.appendChild(parentElement);
+    
+    let parentElement1=getElementById("regi"), parentElement2=getElementById("logi");
+    grandparentElement.removeChild(parentElement1);
+    grandparentElement.removeChild(parentElement2);
+  }
+  else{
+    let parentElement1=document.createElement("li");
+    parentElement1.setAttribute("id", "regi");
+
+    let childElement1=document.createElement("a");
+    childElement1.innerHTML="Register";
+    childElement1.setAttribute("href", "register.html");
+    parentElement1.appendChild(childElement1);
+    grandparentElement.appendChild(parentElement1);
+
+
+    let parentElement2=document.createElement("li");
+    parentElement2.setAttribute("id", "logi");
+    
+    let childElement2=document.createElement("a");
+    childElement2.innerHTML="Login";
+    childElement2.setAttribute("href", "login.html");
+    parentElement2.appendChild(childElement2);
+    grandparentElement.appendChild(parentElement2);
+  }
+} catch (err) {
+  console.log(err);
+}
+
 async function postRegisterData(event) {
   event.preventDefault();
 
@@ -169,12 +211,12 @@ function handleLogout() {
 //   function fetchAuthStatus() {
 //     try {
 //       const jwtToken = localStorage.getItem("jwtToken");
-//       const auth = document.getElementById("auth");
+//       const grandparentElement = document.getElementById("grandparentElement");
 
 //       if (!jwtToken) {
-//         auth.innerText = "Not Authenticated";
+//         grandparentElement.innerText = "Not Authenticated";
 //       } else {
-//         auth.innerText = "Authenticated";
+//         grandparentElement.innerText = "Authenticated";
 //       }
 //     } catch (err) {
 //       console.log(err);
