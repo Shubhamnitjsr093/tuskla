@@ -1,4 +1,4 @@
-const backendUrl = "https://tuskla.vercel.app";
+const backendUrl = "http://localhost:5000";
 let email = "";
 
 const grandparentElement = document.getElementById("navbar");
